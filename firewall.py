@@ -19,9 +19,9 @@ class Firewall (EventMixin):
 	msg = of.ofp_flow_mod()
 	msg2 = of.ofp_flow_mod()
 	msg.match.dl_src = EthAddr("00:00:00:00:00:02")
-	self.connection.send(msg)
+	connection.send(msg)
 	msg2.match.dl_dst = EthAddr("00:00:00:00:00:03")
-	self.connection.send(msg2)	
+	connection.send(msg2)	
         log.debug("Firewall rules installed on %s", dpidToStr(event.dpid))
 
 def launch ():
