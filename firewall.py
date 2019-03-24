@@ -18,7 +18,7 @@ class Firewall (EventMixin):
         ''' Add your logic here ... '''
 	msg = of.ofp_flow_mod()
 	msg2 = of.ofp_flow_mod()
-	if msg.match.dl_src == EthAddr("00:00:00:00:00:02") or msg2.match.dl_dst == EthAddr("00:00:00:00:00:03")
+	if msg.match.dl_src == EthAddr("00:00:00:00:00:02") or msg2.match.dl_dst == EthAddr("00:00:00:00:00:03"):
 	event.connection.send(msg2)
         log.debug("Firewall rules installed on %s", dpidToStr(event.dpid))
 
