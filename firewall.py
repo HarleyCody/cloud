@@ -16,6 +16,8 @@ class Firewall (EventMixin):
 
     def _handle_ConnectionUp (self, event):
         ''' Add your logic here ... '''
+	msg = of.ofp_flow_mod()
+	msg2 = of.ofp_flow_mod()
 	msg.match.dl_src = EthAddr("00:00:00:00:00:02")
 	self.connection.send(msg)
 	msg2.match.dl_dst = EthAddr("00:00:00:00:00:03")
