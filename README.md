@@ -26,7 +26,7 @@ build FTF
 ---------------------
 After Java12 is all set, compile steps kicks in.
 
-Before compiling, please make sure the terminal is at .../FoodTruck/src. Then FTF can be compiled by running:
+Before compiling, please make sure the FoodTruckFinder.zip is unzip and terminal is at .../FoodTruck/src. Then FTF can be compiled by running:
 ```
 javac FoodTruckFinder.java
 ```
